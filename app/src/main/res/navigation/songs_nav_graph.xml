@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/songs_nav_graph.xml"
+    app:startDestination="@id/homepage">
+
+    <fragment
+        android:id="@+id/homepage"
+        android:name="com.example.soundifyktvar.ui.fragments.homepage"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_homepage2_to_playSongFragment2"
+            app:destination="@id/playSongFragment" />
+        <action
+            android:id="@+id/action_homepage_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playSongFragment"
+        android:name="com.example.soundifyktvar.ui.fragments.playSongFragment"
+        android:label="fragment_play_song"
+        tools:layout="@layout/fragment_play_song" />
+    <fragment
+        android:id="@+id/playlist"
+        android:name="com.example.soundifyktvar.ui.fragments.playlist"
+        android:label="fragment_playlist"
+        tools:layout="@layout/fragment_playlist" >
+        <action
+            android:id="@+id/action_playlist2_to_playSongFragment2"
+            app:destination="@id/playSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.soundifyktvar.ui.fragments.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search2_to_playSongFragment2"
+            app:destination="@id/playSongFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.inventory.AddItemFragment"
+        android:label="AddItemFragment" />
+</navigation>
